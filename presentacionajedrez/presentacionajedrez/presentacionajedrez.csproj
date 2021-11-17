@@ -43,6 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAgregarHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarHotel.Designer.cs">
+      <DependentUpon>FrmAgregarHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarParticipante.Designer.cs">
+      <DependentUpon>FrmAgregarParticipante.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +65,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAgregarHotel.resx">
+      <DependentUpon>FrmAgregarHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarParticipante.resx">
+      <DependentUpon>FrmAgregarParticipante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmmenu.resx">
       <DependentUpon>frmmenu.cs</DependentUpon>
     </EmbeddedResource>
