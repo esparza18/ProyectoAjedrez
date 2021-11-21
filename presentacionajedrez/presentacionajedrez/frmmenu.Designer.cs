@@ -38,13 +38,14 @@
             this.btnpartidas = new System.Windows.Forms.ToolStripButton();
             this.lblSalir = new System.Windows.Forms.ToolStripLabel();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
-            this.lblTipoCuenta = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.DarkGray;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toolStrip1.Font = new System.Drawing.Font("Calibri", 20F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblhoteles,
             this.btnhoteles,
@@ -53,18 +54,20 @@
             this.lblPartidas,
             this.btnpartidas,
             this.lblSalir,
-            this.btnSalir,
-            this.lblTipoCuenta});
+            this.btnSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(76, 450);
+            this.toolStrip1.Size = new System.Drawing.Size(157, 460);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // lblhoteles
             // 
+            this.lblhoteles.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblhoteles.LinkColor = System.Drawing.Color.White;
             this.lblhoteles.Name = "lblhoteles";
-            this.lblhoteles.Size = new System.Drawing.Size(73, 15);
+            this.lblhoteles.Size = new System.Drawing.Size(154, 33);
             this.lblhoteles.Text = "Hoteles";
             // 
             // btnhoteles
@@ -73,13 +76,14 @@
             this.btnhoteles.Image = ((System.Drawing.Image)(resources.GetObject("btnhoteles.Image")));
             this.btnhoteles.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnhoteles.Name = "btnhoteles";
-            this.btnhoteles.Size = new System.Drawing.Size(73, 20);
-            this.btnhoteles.Text = "Usuarios";
+            this.btnhoteles.Size = new System.Drawing.Size(154, 20);
+            this.btnhoteles.Text = "hoteles";
+            this.btnhoteles.Click += new System.EventHandler(this.btnhoteles_Click);
             // 
             // lblparticipantes
             // 
             this.lblparticipantes.Name = "lblparticipantes";
-            this.lblparticipantes.Size = new System.Drawing.Size(73, 15);
+            this.lblparticipantes.Size = new System.Drawing.Size(154, 33);
             this.lblparticipantes.Text = "Participantes";
             // 
             // btnparticipantes
@@ -88,13 +92,14 @@
             this.btnparticipantes.Image = ((System.Drawing.Image)(resources.GetObject("btnparticipantes.Image")));
             this.btnparticipantes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnparticipantes.Name = "btnparticipantes";
-            this.btnparticipantes.Size = new System.Drawing.Size(73, 20);
+            this.btnparticipantes.Size = new System.Drawing.Size(154, 20);
             this.btnparticipantes.Text = "toolStripButton2";
+            this.btnparticipantes.Click += new System.EventHandler(this.btnparticipantes_Click);
             // 
             // lblPartidas
             // 
             this.lblPartidas.Name = "lblPartidas";
-            this.lblPartidas.Size = new System.Drawing.Size(73, 15);
+            this.lblPartidas.Size = new System.Drawing.Size(154, 33);
             this.lblPartidas.Text = "Partidas";
             // 
             // btnpartidas
@@ -103,13 +108,14 @@
             this.btnpartidas.Image = ((System.Drawing.Image)(resources.GetObject("btnpartidas.Image")));
             this.btnpartidas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnpartidas.Name = "btnpartidas";
-            this.btnpartidas.Size = new System.Drawing.Size(73, 20);
+            this.btnpartidas.Size = new System.Drawing.Size(154, 20);
             this.btnpartidas.Text = "toolStripButton1";
+            this.btnpartidas.Click += new System.EventHandler(this.btnpartidas_Click);
             // 
             // lblSalir
             // 
             this.lblSalir.Name = "lblSalir";
-            this.lblSalir.Size = new System.Drawing.Size(73, 15);
+            this.lblSalir.Size = new System.Drawing.Size(154, 33);
             this.lblSalir.Text = "Salir";
             // 
             // btnSalir
@@ -118,22 +124,17 @@
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(73, 20);
+            this.btnSalir.Size = new System.Drawing.Size(154, 20);
             this.btnSalir.Text = "toolStripButton2";
-            // 
-            // lblTipoCuenta
-            // 
-            this.lblTipoCuenta.Name = "lblTipoCuenta";
-            this.lblTipoCuenta.Size = new System.Drawing.Size(73, 15);
-            this.lblTipoCuenta.Text = "cuenta";
-            this.lblTipoCuenta.Visible = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(708, 460);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmmenu";
             this.Text = "frmmenu";
@@ -155,6 +156,5 @@
         public System.Windows.Forms.ToolStripButton btnpartidas;
         public System.Windows.Forms.ToolStripLabel lblSalir;
         public System.Windows.Forms.ToolStripButton btnSalir;
-        public System.Windows.Forms.ToolStripLabel lblTipoCuenta;
     }
 }

@@ -8,7 +8,7 @@ using entidadesajedrez;
 
 namespace manejadorajedrez
 {
-    class manejadorpartidas
+    public class manejadorpartidas
     {
         ajedrezaccesodatos _ajedrezaccesodatos = new ajedrezaccesodatos();
 
@@ -18,50 +18,41 @@ namespace manejadorajedrez
             string cadenaErrores = "";
 
 
-            if (partidas.Nombre.Length == 0 || partidas.Nombre == null)
+            if (partida.id.Length == 0 || partida.id == null)
             {
-                cadenaErrores = cadenaErrores + "El campo de la descripcion no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
 
-            if (partidas.Apellidop.Length == 0 || partidas.Apellidop == null)
+            if (partida.cod_p.Length == 0 || partida.cod_p == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
 
-            if (partidas.Apellidom.Length == 0 || partidas.Apellidom == null)
+            if (partida.jornada.Length == 0 || partida.jornada == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
 
-            if (partidas.Fechanacimiento.Length == 0 || partidas.Fechanacimiento == null)
+            if (partida.jugada.Length == 0 || partida.jugada == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
 
-            if (partidas.Rfc.Length == 0 || partidas.Rfc == null)
+            if (partida.comentario.Length == 0 || partida.comentario == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
 
-            if (partidas.Contrasena.Length == 0 || partidas.Contrasena == null)
+            if (partida.movimiento.Length == 0 || partida.movimiento == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de la partida no puede ser vacio \n";
                 error = false;
             }
-
-
-            if (partidas.Fkidaccesos.Length == 0 || partidas.Fkidaccesos == null)
-            {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
-                error = false;
-            }
-
-
 
 
             var valida = new Tuple<bool, string>(error, cadenaErrores);
@@ -115,11 +106,6 @@ namespace manejadorajedrez
             }
         }
 
-        public bool Existepartidas(partidas partida)
-        {
-            var existe = _ajedrezaccesodatos.Existepartidas(partida);
-            return existe;
-        }
 
     }
 }

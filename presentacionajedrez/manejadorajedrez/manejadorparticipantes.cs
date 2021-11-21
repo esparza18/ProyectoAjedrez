@@ -8,7 +8,7 @@ using entidadesajedrez;
 
 namespace manejadorajedrez
 {
-    class manejadorparticipantes
+    public class manejadorparticipantes
     {
         ajedrezaccesodatos _ajedrezaccesodatos = new ajedrezaccesodatos();
 
@@ -18,52 +18,53 @@ namespace manejadorajedrez
             string cadenaErrores = "";
 
 
-            if (participantes.Nombre.Length == 0 || participantes.Nombre == null)
+            if (participante.id.Length == 0 || participante.id == null)
             {
-                cadenaErrores = cadenaErrores + "El campo de la descripcion no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo de participantes no puede ser vacio \n";
                 error = false;
             }
 
-            if (participantes.Apellidop.Length == 0 || participantes.Apellidop == null)
+            if (participante.nombre.Length == 0 || participante.nombre == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantes no puede ser vacio \n";
                 error = false;
             }
 
-            if (participantes.Apellidom.Length == 0 || participantes.Apellidom == null)
+            if (participante.direccion.Length == 0 || participante.direccion == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantesno puede ser vacio \n";
                 error = false;
             }
 
-            if (participantes.Fechanacimiento.Length == 0 || participantes.Fechanacimiento == null)
+            if (participante.telefono.Length == 0 || participante.telefono == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantes no puede ser vacio \n";
                 error = false;
             }
 
-            if (participantes.Rfc.Length == 0 || participantes.Rfc == null)
+            if (participante.campeonato.Length == 0 || participante.campeonato == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantes no puede ser vacio \n";
                 error = false;
             }
 
-            if (participantes.Contrasena.Length == 0 || participantes.Contrasena == null)
+            if (participante.ocupacion.Length == 0 || participante.ocupacion == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantes no puede ser vacio \n";
                 error = false;
             }
 
-
-            if (participantes.Fkidaccesos.Length == 0 || participantes.Fkidaccesos == null)
+            if (participante.nombrepa.Length == 0 || participante.nombrepa == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo participantesno puede ser vacio \n";
                 error = false;
             }
 
-
-
-
+            if (participante.num_club.Length == 0 || participante.num_club == null)
+            {
+                cadenaErrores = cadenaErrores + "El campo participantes no puede ser vacio \n";
+                error = false;
+            }
             var valida = new Tuple<bool, string>(error, cadenaErrores);
             return valida;
         }
@@ -83,7 +84,7 @@ namespace manejadorajedrez
 
         public List<participantes> Obtenerparticipantes(string filtro)
         {
-            var listaContactos = _ajedrezaccesodatos.Obtenerpartidas(filtro);
+            var listaContactos = _ajedrezaccesodatos.Obtenerparticipantes(filtro);
             return listaContactos;
         }
 
@@ -113,12 +114,6 @@ namespace manejadorajedrez
 
                 Console.WriteLine("Fallo la eliminacion" + ex.Message);
             }
-        }
-
-        public bool Existeparticipantes(participantes participante)
-        {
-            var existe = _ajedrezaccesodatos.Existeparticipantes(participante);
-            return existe;
         }
 
     }

@@ -1,0 +1,5 @@
+C:\Users\jorge 18\Downloads\ProyectoAjedrez-Wendy\ProyectoAjedrez-Wendy\presentacionajedrez\entidadesajedrez\bin\Debug\entidadesajedrez.dll
+C:\Users\jorge 18\Downloads\ProyectoAjedrez-Wendy\ProyectoAjedrez-Wendy\presentacionajedrez\entidadesajedrez\bin\Debug\entidadesajedrez.pdb
+C:\Users\jorge 18\Downloads\ProyectoAjedrez-Wendy\ProyectoAjedrez-Wendy\presentacionajedrez\entidadesajedrez\obj\Debug\entidadesajedrez.csprojAssemblyReference.cache
+C:\Users\jorge 18\Downloads\ProyectoAjedrez-Wendy\ProyectoAjedrez-Wendy\presentacionajedrez\entidadesajedrez\obj\Debug\entidadesajedrez.dll
+C:\Users\jorge 18\Downloads\ProyectoAjedrez-Wendy\ProyectoAjedrez-Wendy\presentacionajedrez\entidadesajedrez\obj\Debug\entidadesajedrez.pdb

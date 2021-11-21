@@ -8,22 +8,20 @@ namespace entidadesajedrez
 {
     public class partidas
     {
-        private int _idusuario;
-        private string _nombre;
-        private string _apellidop;
-        private string _apellidom;
-        private string _fechanacimiento;
-        private string _rfc;
-        private string _contrasena;
-        private string _fkidaccesos;
+        
+        private string _id;
+        private string _cod_p;
+        private string _jornada;
+        private string _jugada;
+        private string _comentario;
+        private string _movimiento;
 
-        public int Idusuario { get => _idusuario; set => _idusuario = value; }
-        public string Apellidop { get => _apellidop; set => _apellidop = value; }
-        public string Apellidom { get => _apellidom; set => _apellidom = value; }
-        public string Fechanacimiento { get => _fechanacimiento; set => _fechanacimiento = value; }
-        public string Rfc { get => _rfc; set => _rfc = value; }
-        public string Fkidaccesos { get => _fkidaccesos; set => _fkidaccesos = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Contrasena { get => _contrasena; set => _contrasena = value; }
+        public string id { get => _id; set => _id = value; }
+        public string cod_p { get => _cod_p; set => _cod_p = value; }
+        public string jornada { get => _jornada; set => _jornada = value; }
+        public string jugada { get => _jugada; set => _jugada = value; }
+        public string comentario { get => _comentario; set => _comentario = value; }
+        public string movimiento { get => _movimiento; set => _movimiento = value; }
+
     }
 }

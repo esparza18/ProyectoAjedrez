@@ -18,51 +18,46 @@ namespace manejadorajedrez
             string cadenaErrores = "";
 
 
-            if (hoteles.Nombre.Length == 0 || hoteles.Nombre == null)
+            if (hotel.id.Length == 0 || hotel.nombre == null)
             {
-                cadenaErrores = cadenaErrores + "El campo de la descripcion no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
+                error = false;
+            }
+            if (hotel.nombre.Length == 0 || hotel.nombre == null)
+            {
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
 
-            if (hoteles.Apellidop.Length == 0 || hoteles.Apellidop == null)
+            if (hotel.direccion.Length == 0 || hotel.direccion == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
 
-            if (hoteles.Apellidom.Length == 0 || hoteles.Apellidom == null)
+            if (hotel.telefono.Length == 0 || hotel.telefono == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
 
-            if (hoteles.Fechanacimiento.Length == 0 || hoteles.Fechanacimiento == null)
+            if (hotel.entradas.Length == 0 || hotel.entradas == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
 
-            if (hoteles.Rfc.Length == 0 || hoteles.Rfc == null)
+            if (hotel.capacidad.Length == 0 || hotel.capacidad == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
 
-            if (hoteles.Contrasena.Length == 0 || hoteles.Contrasena == null)
+            if (hotel.medios.Length == 0 || hotel.medios == null)
             {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
+                cadenaErrores = cadenaErrores + "El campo del hotel no puede ser vacio \n";
                 error = false;
             }
-
-
-            if (hoteles.Fkidaccesos.Length == 0 || hoteles.Fkidaccesos == null)
-            {
-                cadenaErrores = cadenaErrores + "El campo del encargado no puede ser vacio \n";
-                error = false;
-            }
-
-
-
 
             var valida = new Tuple<bool, string>(error, cadenaErrores);
             return valida;
@@ -113,12 +108,6 @@ namespace manejadorajedrez
 
                 Console.WriteLine("Fallo la eliminacion" + ex.Message);
             }
-        }
-
-        public bool Existehoteles(hoteles hotel)
-        {
-            var existe = _ajedrezaccesodatos.Existehoteles(hotel);
-            return existe;
         }
 
     }
